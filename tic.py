@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup 
-#from navi import get_parameters
-#from navi_shell import print_message
+from navi import get_parameters
+from navi_shell import print_message
 
 
 command = "navi-tic"
@@ -32,14 +32,11 @@ def get_rss_titles_and_excerpts():
 
     return titles_and_excerpts
 
-def main():
+
+def run(arguments=None):
     titles_and_excerpts = get_rss_titles_and_excerpts()
 
     # Print the latest 5 RSS feed titles and excerpts
-    print(f"{RSS_FEED_TITLE} Latest Titles and Excerpts:")
+    print_message(f"{RSS_FEED_TITLE} Latest Titles and Excerpts:")
     for title, excerpt in titles_and_excerpts:
-        print(f"Title: {title}")
-        print(f"Excerpt: {excerpt}\n")
-
-def run(arguments=None):
-    main()    
+        print_message(f"Title: {title}\nExcerpt: {excerpt}\n")  
