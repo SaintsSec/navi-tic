@@ -39,4 +39,5 @@ def run(arguments=None):
     # Print the latest 5 RSS feed titles and excerpts
     print_message(f"{RSS_FEED_TITLE} Latest Titles and Excerpts:")
     for title, excerpt in titles_and_excerpts:
-        print_message(f"Title: {title}\nExcerpt: {excerpt}\n")  
+        print_message(f"Title: {title}\nExcerpt: {excerpt}\n")
+        return
