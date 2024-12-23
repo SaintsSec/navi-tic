@@ -62,7 +62,7 @@ def run(arguments=None) -> None:
                 entries.append({
                     'source': get_source_name(feed),
                     'title': entry.title,
-                    'link': shorten_url(entry.link),
+                    'link': entry.link,
                     'published': published
                 })
 
