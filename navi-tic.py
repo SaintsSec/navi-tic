@@ -5,7 +5,6 @@ import pytz
 import requests
 from urllib.parse import urlparse
 
-
 command: str = "navi-tic"
 use: str = "Gather cybersec news from RSS feeds"
 aliases: list = ['threat intelligence', 'cybersec news', 'cybersecurity news', 'threat intel']
