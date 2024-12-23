@@ -69,6 +69,6 @@ def run(arguments=None) -> None:
     if not entries:
         navi_instance.print_message("No new threat intelligence news found.")
     else:
-        navi_instance.print_message("Here are some recent threat intelligence news articles:")
+        navi_instance.print_message("Here are some recent threat intelligence news articles:\n")
         for entry in sorted(entries, key=lambda x: x['published'], reverse=True):
-            navi_instance.print_message(f"{entry['source']}: {entry['title']}\n{entry['link']}")
+            print(f"{entry['source']}: {entry['title']}\n{entry['link']}\n")
